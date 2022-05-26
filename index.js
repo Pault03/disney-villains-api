@@ -7,7 +7,7 @@ const app = express()
 
 app.get('/villains', getAllVillains)
 
-app.get('/villains/:searchTerm', getVillainBySlug)
+app.get('/villains/:slug', getVillainBySlug)
 
 app.post('/villains', express.json(), saveNewVillain)
 
