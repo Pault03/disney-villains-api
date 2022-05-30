@@ -21,6 +21,8 @@ const getVillainBySlug = async (request, response) => {
       where: { slug }
     })
 
+    if (!foundVillain) return response.sendStatus(404)
+
     return response.status(200).send(foundVillain)
   } catch (error) {
     return response.sendStatus(500)
